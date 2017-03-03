@@ -65,7 +65,7 @@ In no particular order, I would like to add:
   1. Microinteractions to improve UX
   1. Quiz at the end of the tour
   1. API call to NASA or other observatory db reporting current location of planets overhead
-  
+
 
 ## Author
 
@@ -74,5 +74,3 @@ In no particular order, I would like to add:
 ## Acknowledgments
 
 * This project was developed as part of the Web Development Immersive program at General Assembly in NYC, February 2017. My mentors for this build were Ariana and Vince. My thanks to them!
-
-* Inspiration
