@@ -9,51 +9,63 @@ I wondered how I could relate the relative sizes and distances of the planets in
 This web project is a thought experiment that seeks to let the user appreciate the how small the Big Apple is on a cosmic scale. 
 
 ### Screenshot:
-![Screenshot](public/images/siteHome.png)
+![Screenshot](http://franklinchristopherbrooks.com/images/PlanetsScreenShot.png)
 
-#### [Link to Live Site](https://pacific-savannah-99868.herokuapp.com/)  
+#### [Link to Live Site](https://desolate-everglades-65827.herokuapp.com/)  
 #### [Link to Repo](https://github.com/franklinbrooks/Planets)  
 #### [Link to ZenHub](https://github.com/franklinbrooks/Planets#boards?repos=82419944)  
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+This project includes a package.JSON file which provides details for the above dependencies and others. These files are imported into the node_modules folder by Node Package Manager. Font-Awesome and Materialize-CSS are linked via CDN.
 
-### Prerequisites
+Download or clone repo.
+Run npm install in terminal.
+Run npm start from terminal.
 
-What things you need to install the software and how to install them
+## Code Example: Rendering an A-Frame
+When the user explores relative size and position of planets versus the New York City street grid, a Google Maps Street View is rendered in an i-frame via API call.  Over this, I z-indez an A-Frame of a sphere scaled to the size of its orbit over Manhattan. 
 
-```
-Give examples
-```
+```javascript
 
-### Installing
+    <div style="position:relative;height:400px;width:80%;margin:0 auto">
 
-A step by step series of examples that tell you have to get a development env running
+      <iframe width="100%" height="400"
+        src="https://www.google.com/maps/embed/v1/streetview?key=<%= process.env.GOOGLE_KEY %>&location=40.722472,-73.999280&heading=45&pitch=5&fov=100">
+      </iframe>
 
-Say what the step will be
+      <div style="width:900px;height:400px;z-index:2;position:absolute;top:0px">
+        <a-scene embedded style="left:250;height:300;width:400">
+          <a-sphere position="0 1.8 -1" radius=".03" color="#e58c5d"></a-sphere>
+        </a-scene>
+      </div>
 
-```
-Give the example
-```
+    </div>
 
-And repeat
+    <div class="container section no-pad-bot">
+      <p style="text-align:center">Jupiter is the large planet, 46cm in size, above Broadway in SoHo. (Use arrow keys / mouse to pan / zoom)</p>
+    </div>
 
-```
-until finished
-```
 
-End with an example of getting some data out of the system or using it for a little demo
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+````
 
 ## Built With
 
 * [Node](https://nodejs.org/) - The backend web framework used
 * [NPM](https://www.npmjs.com/) - Dependency Management
 * [Express](expressjs.com) - The frontend web framework used
+
+## Minimum Viable Product
+- Use PostgreSQL & Express to build full stack web app
+- Layout and style your front-end, so that is Responsive and uses a CSS Framework
+- Deploy your application online so it's publicly accessible
+
+### Possible Future Improvements
+In no particular order, I would like to add:
+  1. Microinteractions to improve UX
+  1. Quiz at the end of the tour
+  1. API call to NASA or other observatory db reporting current location of planets overhead
+  
 
 ## Author
 
