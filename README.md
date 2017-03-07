@@ -15,14 +15,6 @@ This web project is a thought experiment that seeks to let the user appreciate t
 #### [Link to Repo](https://github.com/franklinbrooks/Planets)  
 #### [Link to ZenHub](https://github.com/franklinbrooks/Planets#boards?repos=82419944)  
 
-## Getting Started
-
-This project includes a package.JSON file which provides details for the above dependencies and others. These files are imported into the node_modules folder by Node Package Manager. Font-Awesome and Materialize-CSS are linked via CDN.
-
-Download or clone repo.
-Run npm install in terminal.
-Run npm start from terminal.
-
 ## Code Example: Rendering an A-Frame
 When the user explores relative size and position of planets versus the New York City street grid, a Google Maps Street View is rendered in an i-frame via API call.  Over this, I z-indez an A-Frame of a sphere scaled to the size of its orbit over Manhattan. 
 
@@ -54,6 +46,14 @@ When the user explores relative size and position of planets versus the New York
 * [Node](https://nodejs.org/) - The backend web framework used
 * [NPM](https://www.npmjs.com/) - Dependency Management
 * [Express](expressjs.com) - The frontend web framework used
+
+## Getting Started
+
+This project includes a package.JSON file which provides details for the above dependencies and others. These files are imported into the node_modules folder by Node Package Manager. Font-Awesome and Materialize-CSS are linked via CDN.
+
+Download or clone repo.
+Run npm install in terminal.
+Run npm start from terminal.
 
 ## Minimum Viable Product
 - Use PostgreSQL & Express to build full stack web app
